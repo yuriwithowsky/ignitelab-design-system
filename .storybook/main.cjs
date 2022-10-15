@@ -12,10 +12,12 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    interactonsDebugger: true,
   },
+  staticDirs: ["../public"],
   viteFinal: (config, { configType }) => {
     if (configType === "PRODUCTION") {
-      config.base = "ignitelab-design-system";
+      config.base = "/ignitelab-design-system/";
     }
     return config;
   },
